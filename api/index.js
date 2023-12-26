@@ -8,10 +8,12 @@ const helmet = require('helmet'); // security- helps set HTTP headers
 const morgan = require('morgan'); // logs incoming HTTP requests
 const multer = require('multer'); // handling multipart/form-data
 const path = require('path'); // provides various utility functions for working with file and directory paths in a platform-independent way
+const cors = require('cors');
 
 dotenv.config();
 
 const port = 8080;
+app.use(cors());
 
 // Import Auth Route
 const authRoute = require('./routes/auth');
