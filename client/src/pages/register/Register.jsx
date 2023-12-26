@@ -45,7 +45,7 @@ export default function Register() {
       try {
 
         // make a post request to the server to register
-        await axios.post("/auth/register", user);
+        await axios.post("http://localhost:8080/api/auth/register", user);
         // redirect to the login page
         navigate("/login");
       } catch (error) {
